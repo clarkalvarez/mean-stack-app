@@ -7,8 +7,6 @@ import { NgForm } from '@angular/forms'
   styleUrls: ['./post-create.component.scss']
 })
 export class PostCreateComponent implements OnInit {
-  enteredTitle = '';
-  enteredContent = '';
   constructor(public postsService: PostsService) { }
 
   ngOnInit(): void {
@@ -18,7 +16,7 @@ export class PostCreateComponent implements OnInit {
     if(form.status == "INVALID") {
       return;
     }
-    this.postsService.addPost(form.value.title, form.value.content);
+    this.postsService.addPost(form.value.name, form.value.bio);
     form.resetForm();
   }
 

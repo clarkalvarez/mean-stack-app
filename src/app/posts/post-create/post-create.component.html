@@ -3,23 +3,23 @@
         <mat-form-field>
             <input 
             matInput rows="6"
-            name = "title"
+            name = "name"
             ngModel
             required
             minlength="3"
-            #title="ngModel"
-            placeholder="Title">
-            <mat-error *ngIf="title.invalid">Please enter a post title</mat-error>
+            #name="ngModel"
+            placeholder="Name">
+            <mat-error *ngIf="name.invalid">Please enter a name</mat-error>
         </mat-form-field>
         <mat-form-field>
             <textarea 
             matInput rows="6"   
-            name = "content"
-            placeholder="Content"
+            name = "bio"
+            placeholder="Biography"
             ngModel
             required
-            #content="ngModel"></textarea>
-            <mat-error *ngIf="content.invalid">Please enter a post content</mat-error>
+            #bio="ngModel"></textarea>
+            <mat-error *ngIf="bio.invalid">Please enter a bio</mat-error>
         </mat-form-field>
     
         <button 
